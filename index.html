@@ -1,5 +1,536 @@
-<html>
-  <body>
-    <a href="laning.html" > Laning </a>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<title>Laning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css" title="Style"/>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Laning</a>
+    <a href="videos.html" class="w3-bar-item w3-button w3-hover-white">Vidéos</a>
+    <a href="retours.html" class="w3-bar-item w3-button w3-hover-white">Retours</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar" style="overflow: hidden">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Index</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Lane"> Qu'est-ce que c'est ? </a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Equilibrium"> Équilibre de lane</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#HorsLane"> Mécaniques hors lane </a>
+  <a class="w3-bar-item w3-button w3-hover-black subsection" href="#Stack"> Stack</a>
+  <a class="w3-bar-item w3-button w3-hover-black subsection" href="#Pull"> Pull</a>
+  <a class="w3-bar-item w3-button w3-hover-black subsection" href="#Connect"> Connect</a>
+  <a class="w3-bar-item w3-button w3-hover-black subsection" href="#CreepDrag"> Creep Dragging</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Agro"> Maîtriser l'agro</a>
+  <a class="w3-bar-item w3-button w3-hover-black subsection" href="#AgroGlobal"> L'agro global </a>
+  <a class="w3-bar-item w3-button w3-hover-black subsection" href="#CreepAgro"> Utiliser l'agro des creeps </a>
+  <a class="w3-bar-item w3-button w3-hover-black subsection" href="#NoCreepAgro"> Éviter l'agro des creeps </a>
+  <a class="w3-bar-item w3-button w3-hover-black subsection" href="#TowerAgro"> Agro des tours </a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Strategies"> Stratégies</a>
+  <a class="w3-bar-item w3-button w3-hover-black subsection" href="#Passive"> Stratégie passive </a>
+  <a class="w3-bar-item w3-button w3-hover-black subsection" href="#Agressive"> Stratégie agressive </a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Fin"> Flexibilité et fin de lane</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div id="Lane" class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Qu'est-ce  la phase de lane et pourquoi ça existe ?</h1>
+      <p>
+	Le but de DotA est de faire tomber l'ancien adverse avant que l'équipe
+	ennemie ne vous fasse la même chose. Heureusement , il est très
+	difficile de le faire directement pour une unique raison : au début de
+	la partie, la différence de 'force' entre les deux équipes est
+	négligeable devant la force des tours qui protègent l'ancien. Les héros
+	vont donc essayer de gagner de l'or et de l'expérience des creeps pour
+	déséquilibrer la balance. L'autre équipe voulant faire la même chose,
+	l'enjeu et donc le lieu du combat sera les 3 lanes, là où les gains sont
+	les plus faciles et les plus importants en début de partie.
+      </p>
+      <p>
+	Une première stratégie est de vouloir se débarrasser des héros ennemis
+	pour gagner son or et son expérience tranquillement sans que l'autre
+	équipe le fasse.  Encore une fois, la faiblesse des héros en début de
+	partie limite cette stratégie directe : les creeps défendent les héros
+	de leur équipe et la proximité des tours punit toute agression
+	démesurée.
+      </p>
+      <p>
+
+	Les héros s'affrontent donc aussi indirectement dans un combat de last
+	hit et de deny. Dans les premières minutes, ceux qui en ont le plus
+	sortent vainqueurs de la phase de lane.
+      </p>
+      <p>
+
+	Rester en lane ou pas ? Il y a plusieurs facteurs à considérer :
+	<ul>
+	<li> la quantité d'or et d'expérience par minute que l'on peut obtenir
+	en restant en lane, cette quantité pouvant changer pour de nombreuses
+	raisons (item décisif, niveau décisif, épuisement de la regen ...) </li>
+	<li> la quantité d'or et d'expérience que l'on peut obtenir ailleurs
+	(jungle, gank, runes, outpost) </li>
+	<li> la quantité d'or et d'expérience que l'on peut empêcher l'équipe
+	adverse de gagner (deny, forcer à acheter de la regen, potentiel de
+	kill) </li>
+	<li> d'autres raisons purement vénales ... </li>
+	<li> et plus généralement lorsqu'une équipe sent qu'en se regroupant le
+	gain sera plus élevé </li>
+	</ul>
+      </p>
+    </div>
+    <!-- <div class="w3-third w3-container"> -->
+    <!--   <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p> -->
+    <!--   <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p> -->
+    <!-- </div> -->
+  </div>
+
+  <div id="Equilibrium" class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Équilibre de la lane</h1>
+      <p> Il y a 3 lanes dans DotA : midlane, safelane et offlane. La midlane
+	est au milieu alors que la safelane et l'offlane sont sur les côtés. Si
+	vous êtes Radiant, la safelane est en bas et l'offlane est en haut et
+	inversement si vous êtes Dire. La safelane est appelée comme ça parce
+	que c'est la lane où l'équilibre naturel (l'endroit où les creeps se
+	rencontrent initialement) est le plus proche de la t1. Sur la safelane,
+	c'est donc naturellement plus facile de laner qu'en offlane, simplement
+	parce qu'il est plus facile de se réfugier sous sa tour. On mettra donc
+	plus facilement des héros plus greedy, lents, sans escape ou fragiles
+	sur la safelane. </p>
+
+      <p> Les héros en offlane veulent donc changer l'équilibre pour être plus
+	en sécurité et pour enlever cette sécurité de la tour aux héros
+	adverses. Une première solution évidente pour ça est d'attaquer des
+	creeps, des ennemis pour push et les siens pour que ça push vers vous. Il y
+	a d'autres moyens expliqués dans la suite. </p>
+
+
+      <p> Il faut savoir que les changements d'équilibre sont temporaires, la
+	lane ayant tendance à revenir à l'équilibre naturel. Les déséquilibres
+	trop grands ou vers la t1 de la safelane sont corrigés par les
+	tours. Les petits déséquilibres vers la t1 de l'offlane sont corrigés du
+	fait de l'emplacement de l'équilibre naturel. Prenons comme exemple un
+	creep Radiant ayant survécu à un combat épique de creep. Ce creep va
+	rencontrer la vague suivante seul et n'arrivera donc à l'entamer que
+	d'un quart de barre de vie d'un creep. Un déséquilibre d'un creep entier
+	s'est donc réduit à un déséquilibre d'un quart de creep, qui se réduit à
+	nouveau, etc.  </p>
+
+    </div>
+  </div>
+
+  <div id="HorsLane" class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Mécaniques hors lane</h1>
+      <p> Les stratégies présentées ici se mettent en place en dehors de la
+	lane, c'est-à-dire sans être au centre du combat avec d'autres héros,
+	mais ont un impact certain sur la lane en question. Elles sont
+	applicables par les support mais ne leurs sont pas réservées. </p>
+
+      <div id="Stack" class="w3-row w3-padding-32">
+      <h3 class="w3-text-teal"><em>Le Stack </em></h3>
+      <p> Les camps de neutral sont aussi une ressource qu'il faut savoir
+	exploiter. Chaque camp a une boîte qui est visible en maintenant la
+	touche Alt, je la montre brièvement dans la vidéo suivante. Chaque
+	minute, si il n'y a pas d'unité dans la boîte, un nouveau camp
+	apparaît. Si on attire les creeps d'un camp de neutral en dehors de leur
+	boîte, un nouveau camp va apparaître ce qui donne plus d'unité dans le
+	même camp, c'est ce qu'on appelle stacker. </p>
+
+      <p>
+	Stacker permet principalement de ne pas perdre une ressource : les
+	creeps neutral qui apparaissent toutes les minutes. Les support peuvent
+	stacker et ainsi accélérer le farm du carry si celui-ci peut facilement
+	faire 2 camps ou plus d'un coup. De cette façon, le temps (et donc
+	l'argent!) du support est transféré du support vers le carry. Notez
+	aussi qu'il y a une petite récompense pécunière à celui qui a stack
+	lorsque le camp est nettoyé. </p>
+
+      <p>
+	Pour stacker, il faut commencer à attirer les creeps d'un camp entre 4
+	et 6 secondes avant la minute pile et les tirer vers la sortie de la
+	boîte la plus proche :
+      </p>
+
+      <div class="video-responsive">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5ZiFdHu08RI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </div>
+
+      <div id="Pull" class="w3-row w3-padding-32">
+      <h3 class="w3-text-teal"><em>Le Pull</em></h3>
+
+      <p> À côté des side lane il y a deux camps neutral : un petit et un gros.
+	Il est possible d'attirer ces camps de neutral dans les creeps de vague,
+	c'est ce qu'on appelle pull. Le gros camp peut être pull plus facilement
+	lorsqu'on est offlane tandis que le petit camp ne peut être pull que lorsqu'on
+	est safelane. </p>
+
+
+      <p> Faire un pull permet de faire un camp de neutral facilement : vos
+	creep le tank et mettent des dégats au camp neutral. N'importe quel
+	héros peut pull et donc gagner d'une part de l'expérience et d'autre
+	part de l'or en prenant les last hit des neutral et les deny de la
+	vague. </p>
+
+      <p> Par ailleurs, faire un pull change automatiquement l'équilibre de la
+	lane parce que les creeps qui devaient aller sur la lane n'y vont pas
+	directement.  Si tous les creeps de la vague meurent alors l'équilibre
+	revient à l'équilibre naturel la plupart du temps, c'est-à dire que
+	c'est une bonne chose pour la safelane. </p>
+
+      <p> Attention : lorsque vous faites un pull du petit camp, celui-ci va
+	perdre contre la vague, ce qui veut dire qu'il restera des creeps à la
+	fin du combat. Si la lane était initialement à l'équilibre, les creeps
+	adverses n'ayant momentanément pas d'aversaires vont s'empaler sur votre
+	t1. Vos creeps, après avoir vaincu le petit camp, vont retourner sur la
+	lane ce qui va la push. </p>
+
+      <p> Pour éviter cette situation, vous pouvez commencer par stack le petit
+	camp, ce qui suffira pour battre votre vague de creeps. Vous remarquerez
+	que c'est le cas dans la vidéo, le camp de creep a bien été stack au
+	préalable : </p>
+
+      <div class="video-responsive">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/7qb5OmpUQrA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </div>
+      <div id="Connect" class="w3-row w3-padding-32">
+	<h3 class="w3-text-teal"><em>Connecter avec le gros camp</em></h3>
+
+	<p> On a vu que ce n'était pas toujours une bonne idée de pull un seul petit
+	  camp de creep. Une première solution était de stack avant de pull mais cette
+	  solution prend beaucoup de temps, ce n'est donc pas toujours faisable non plus.
+	  Une autre solution est de continuer à attirer des creeps dans votre vague et
+	  il se trouve que le gros camp fait parfaitement l'affaire ici : </p>
+	<div class="video-responsive">
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/61JGFjPeFUE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+      </div>
+
+
+      <div id="CreepDrag" class="w3-row w3-padding-32">
+	<h3 class="w3-text-teal"><em>Comment creep drag</em></h3>
+        <p> Lorsque vous voulez décaler le combat, peut-être parce que la lane
+	  est difficile, vous pouvez le faire en attirant les vagues de creeps
+	  ennemies hors de leur chemin habituel. Il suffit de les attirer avant
+	  qu'ils ne rencontrent vos creeps. Le résultat est que vous pouvez les
+	  faire rencontrer une de vos vagues suivantes à l'endroit qui vous
+	  convient le mieux, derrière une tour par exemple. </p>
+
+	<p> En faisant cette manoeuvre vous êtes vulnérable puisque vous avez
+	  une vague de creeps qui vous poursuit. Il est donc préférable de
+	  commencer à attirer les creeps assez tôt dans la lane pour être loin
+	  des héros adverses. Un seul héros ne peut pas faire ça pour pour
+	  toutes les vagues, ça prend trop de temps. C'est pourquoi il peut être
+	  intéressant d'attirer deux vagues à la fois, comme montré dans la
+	  vidéo : </p>
+
+	<div class="video-responsive">
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/rQKcc1dr9Pk?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p> En faisant ça vous sacrifiez un peu de farm, vous ne pouvez pas
+	  atteindre toutes les vagues. En contrepartie, si vous faites
+	  rencontrer les vagues suffisamment loin des héros adverses vous pouvez
+	  aussi leur faire perdre du farm si certains de vos creeps meurent en
+	  dehors de la portée d'expérience. </p>
+
+	<p> Cette méthode est radicale et vous assure un minimum de farm mais a
+	  le principal désavantage de ne pas mettre de pression sur les héros
+	  adverses. Les carry sont libres de farm les camps neutral en plus des
+	  vagues. Les support peuvent vous courir après ou changer de lane,
+	  etc. </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="Agro" class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Maîtriser l'agro</h1>
+
+      <p> Maîtriser l'agro est crucial dans DotA. En plus de réduire la quantité
+	de dégats que vous prenez, une bonne gestion de l'agro vous permettra de
+	contrôler l'équilibre de la lane.</p>
+
+      <div id="AgroGlobal" class="w3-row w3-padding-32">
+	<h3 class="w3-text-teal"><em>L'agro global</em></h3>
+	<p> DotA possède une mécanique spéciale quand un héros attaque un héros
+	  ennemi ou une unité alliée, c'est ce que j'appelle l'agro global.
+	  Chaque héros possède son agro global, que l'on peut voir comme un sort
+	  sans cible ni coût de mana avec 3 secondes de CD qui est lancé quand
+	  vous attaquez un héros adverse ou une unité alliée. </p>
+
+	<p> <ul>
+	<li> Quand vous attaquez un héros adverse et que votre agro global n'est
+	  pas en CD, toute unité ennemie qui est à moins de 500 range de vous se
+	  met à vous attaquer et votre agro global se met en CD. </li>
+	<li> Quand vous attaquez une unité alliée et que votre agro global n'est
+	  pas en CD, toute unité ennemie qui était en train de vous attaquer
+	  rechoisit une cible à attaquer et votre agro global se met en CD.</li>
+	  </ul> </p>
+
+	<p> L'attaque n'a pas besoin d'avoir lieu et la cible peut-être
+	  n'importe où sur la map (d'où le nom agro global). Notez bien que
+	  l'agro global ne se déclenche que sur l'attaque et pas sur les
+	  sorts. Les sorts n'ont en général aucun effet sur l'agro. En
+	  particulier les sorts qui modifient votre attaque, comme Frost Arrows
+	  de Drow Ranger par exemple, ne déclenchent pas l'agro global s'ils
+	  sont lancés comme des sorts. En revanche, s'ils sont mis en autocast
+	  et que vous faites une attaque sur un héros, par un click droit par
+	  exemple, alors l'agro global se déclenche. </p>
+
+
+      </div>
+
+      <div id="CreepAgro" class="w3-row w3-padding-32">
+	<h3 class="w3-text-teal"><em>Utiliser l'agro des creeps</em></h3>
+	<p> Une première conséquence est que lorsque vous attaquez un héros
+	ennemi, les creeps ennemis à proximité changent leur focus sur vous. </p>
+
+	<p> Ici on s'intéresse à comment on peut utiliser l'agro des creep à
+	notre avantage :
+	  <ul>
+	    <li> Vous pouvez virtuellement changer l'équilibre de la lane, les
+	      creeps adverses se rapprochant de vous et donc de votre t1. </li>
+
+	    <li> En attirant les creeps ennemis vers vous vous pouvez les attaquer
+	      plus rapidement que les héros ennemis et vous gagnez les instants
+	      précieux qui font la différence entre un last hit et un deny. </li>
+	    <li> Vous pushez naturellement puisque les creeps ennemis arrêtent
+	      alors d'attaquer vos creeps. C'est un désavantage la plupart du
+	      temps puisque ça push la lane. Cependant, il est aussi possible
+	      d'attirer des creeps melee dans votre creep range (qui a moins de
+	      vie et qui attaque plus fort). Celui-ci mourra plus rapidement ce
+	      qui va push la lane vers vous. </li>
+	  </ul>
+	  <div class="video-responsive">
+	    <iframe width="560" height="315" src="https://www.youtube.com/embed/yqIIJRBhD6w?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  </div>
+      </div>
+
+
+      <div id="NoCreepAgro" class="w3-row w3-padding-32">
+	<h3 class="w3-text-teal"><em>Éviter l'agro des creeps</em></h3>
+	<p> Si on ne fait pas attention, on peut attirer les creeps en tant que support
+	  lorsqu'on essaye d'harass un héros adverse :
+	<div class="video-responsive">
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/QBRVKoKVWX4?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p> En passant, la fin de la vidéo montre comment utiliser l'agro global
+	pour ne plus se faire attaquer par les creeps. Mais le mal est déjà
+	fait ... </p>
+
+	<p> En effet, attirer l'agro en tant que support a les 3 désavantages suivants :
+	  <ul>
+	    <li> Vous prenez des dégats. </li>
+	    <li> Vous pushez la lane. </li>
+	    <li> Vous mettez un bazar dans la lane, il devient difficile de last hit. </p>
+	</ul>
+	  Combinés, ces trois désavantages font que c'est un véritable désastre
+	  de prendre l'agro des creeps de la lane en tant que support. </p>
+
+	<p> Pour éviter de prendre l'agro avec son agro global, il suffit de le mettre en CD
+	  avant d'être à 500 de range des creeps ennemis. Vous avez alors 3 secondes pour
+	  harass les héros ennemis : </p>
+	<div class="video-responsive">
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/-8-V7GhOVtE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+      </div>
+
+
+      <div id="TowerAgro" class="w3-row w3-padding-32">
+	<h3 class="w3-text-teal"><em>Tout sur l'agro des tours</em></h3>
+	<p> Quand la tour doit choisir une nouvelle cible à attaquer, elle le
+	  fait dans l'ordre des groupes suivant, en choisissant l'unité la plus
+	  proche pour départager deux unités dans le même groupe :
+	  <ul>
+	    <li> les unités ennemies qui attaquent la tour </li>
+	    <li> les unités ennemies qui attaquent </li>
+	    <li> les autres unités ennemies </li>
+	  </ul>
+	</p>
+	<p> Une première conséquence est que si vous n'attaquez pas et que vous
+	  avez des creeps sous la tour, ceux-ci vont attaquer quelque chose (la
+	  tour ou toute autre unité ennemie), et donc la tour ne va pas vous
+	  choisir. </p>
+	<p>
+	<p> Attention : les creeps n'attaquent pas la tour en priorité. Donc si
+	  vous l'attaquez et que vos creeps attaquent des creeps ennemis, la
+	  tour va vous choisir avant eux. </p>
+
+	<p> On peut aussi en déduire que si vous attaquez une unité ennemie, y
+	  compris les héros, mais qu'un creep est plus proche de la tour que
+	  vous, alors la tour ne vous choisit pas. Ça peut vous sembler bizarre
+	  parce vous avez déjà du subir quelque chose de la sorte : </p>
+
+	<div class="video-responsive">
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/HslsqmPhR68?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<p> La raison est qu'une autre mécanique intervient dans ce cas :
+	  l'<a href="#AgroGlobal">agro global</a> !  Si on attaque directement un héros à moins de 500 de range
+	  d'une tour ennemie, celle-ci se tourne immédiatement vers vous, de
+	  même pour les creeps.</p>
+
+	<p> Si, par contre, vous mettez votre agro global en CD, vous pouvez
+	éviter de prendre le focus pendant jusqu'à 3 secondes : </p>
+	<div class="video-responsive">
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/-3cbqWjP98A?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p> Remarquez dans cette dernière vidéo l'ordre choisi par la tour :
+	  <ul>
+	    <li> d'abord le creep le plus proche qui attaque la tour, c'est un creep
+	      range (pattern courant) </li>
+	    <li> ensuite le deuxième creep range qui attaque la tour alors que celui-ci
+	      est plus loin que les creep melee et que je suis en train d'attaquer WR </li>
+	    <li> enfin un creep melee qui attaque un autre creep </li>
+	    <li> j'aurais été choisi en dernier parce que je n'attaquais plus WR à ce moment là
+	  </ul> </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="Strategies" class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Stratégies</h1>
+
+      <p> Les stratégies présentées peuvent bien sûr être combinées et il arrive
+      souvent qu'un changement (comme une montée en niveau) demande de réévaluer
+      la stratégie employée. </p>
+      <div id="Passive" class="w3-row w3-padding-32">
+	<h3 class="w3-text-teal"><em>Stratégie passive</em></h3>
+	<p> C'est la stratégie qui maximise le farm : le support utilise les
+	  mécaniques hors lane et gagne du farm sur les neutral, le carry
+	  profite de l'expérience non partagée de la lane. Du point de vue du
+	  carry, le support est uniquement un bonus : celui-ci ne lui pique pas
+	  d'expérience et quand il intervient c'est profitable pour lui. </p>
+	<p> Paradoxalement, j'ai remarqué qu'il est facile de trouver des kills en
+	  suivant cette stratégie et j'y vois deux raisons. La première est que
+	  la stratégie permet une avance en niveaux qui est souvent sous
+	  estimée. Ensuite le support n'est pas attendu sur la lane et son
+	  apparition peut créer la surprise. </p>
+
+	<p> Le désavantage de cette stratégie est que les héros ont tendance à
+	  être seuls ce qui créé deux opportunités d'agression : sur le support
+	  et sur le carry. La mise en place de cette stratégie demande donc une
+	  bonne coordination et compréhension de la lane pour anticiper ces
+	  agressions. </p>
+	<div class="video-responsive">
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/-n8mnVmFtyc?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+      </div>
+      <div id="Agressive" class="w3-row w3-padding-32">
+	<h3 class="w3-text-teal"><em>Stratégie agressive</em></h3>
+	<p> Cette stratégie force les échanges de ressources en mettant une
+	  pression constante sur les héros adverses. </p>
+
+	<p> Quels héros choisir pour mettre en place une lane agressive ?  Une
+	  première solution est simplement d'avoir des héros qui mettent
+	  facilement du dégat et de prendre la regen de pv et de mana qu'il faut
+	  pour pouvoir le faire suffisamment longtemps. Une autre manière de
+	  faire est d'avoir des héros avec fort potentiel de kill. Les
+	  adversaires vont être obligés de respecter ce potentiel ce qui
+	  permettra de prendre des échanges favorables. </p>
+
+	<p> Le désavantage de cette stratégie est qu'elle est tout ou rien. Si
+	  un des deux héros quitte la lane, l'autre héros risque d'être en
+	  retard en terme de niveau et donc ne pourra pas tenir la lane. De
+	  même, face à un gank, le retard de niveau risque d'être
+	  déterminant. La mise en place de cette stratégie demande donc une
+	  bonne compréhension de toute la map pour éviter ces situations. </p>
+	<div class="video-responsive">
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/QfkhzRQhfzc?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="Fin" class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Flexibilité et fin de lane</h1>
+      <p> La composition des lane n'est figée dans le marbre et peut changer
+	avec le temps. Ne vous enfermez pas dans une lane ou dans une stratégie
+	qui ne vous va pas. Si vous devez changer de lane, faites-le ! Arrêter
+	aussi la phase de lane quand ce n'est plus profitable. Quelques exemples
+	:
+	<ul>
+	  <li> Vous pouvez décider d'arrêter la stratégie agressive une fois que
+	    le Slark adverse atteint son niveau 6. </li>
+
+	  <li> Le support peut décider de quitter son carry dans une lane où
+	    aucune des deux équipes n'est en mesure de menacer l'autre, sentant
+	    qu'il sera plus utile ailleurs. Ça peut par exemple être le cas d'un
+	    joueur de Crystal Maiden qui supporte un Faceless Void au moment où
+	    le Timbersaw solo atteint son niveau 3 ou 5. </li>
+
+	  <li> Le carry peut décider d'aller farmer la jungle, ce qui sera plus
+	    efficace et moins risqué pour lui. C'est par exemple le cas de Drow
+	    Ranger quand elle atteint son niveau 6. Le support pourra en
+	    profiter pour gagner l'expérience de la lane. Il faut prendre en
+	    compte le risque encouru : les héros adverses sont alors libres de
+	    leur mouvement. Ils peuvent mettre une pression sur la tour ou sur
+	    une autre partie de la map. </li>
+	</ul>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
 </html>
