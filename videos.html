@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Laning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css" title="Style"/>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="laning.html" class="w3-bar-item w3-button w3-hover-white">Laning</a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Vidéos</a>
+    <a href="retours.html" class="w3-bar-item w3-button w3-hover-white">Retours</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Accès rapide</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Stack">Stack</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Pull">Pull</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Connect"> Pull + Connect</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#CreepDrag"> Comment drag des creep</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#UtiliserAgro"> Utiliser l'agro</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#HarassAgro"> Harass avec agro</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#HarassNoAgro"> Harass sans agro</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#DiveAgro"> Dive avec tower agro</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#DiveNoAgro"> Dive sans tower agro</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Passive"> Stratégie passive</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Agressive"> Stratégie agressive</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div id="Stack" class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Comment stack</h3>
+      <div class="video-responsive">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5ZiFdHu08RI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="Pull" class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Comment pull</h3>
+      <div class="video-responsive">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/7qb5OmpUQrA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="Connect" class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Comment pull + connect</h3>
+      <div class="video-responsive">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/61JGFjPeFUE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+    <div id="CreepDrag" class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Comment drag des creeps</h3>
+      <div class="video-responsive">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rQKcc1dr9Pk?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="UtiliserAgro" class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Une utilisation de l'agro des creeps</h3>
+      <div class="video-responsive">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yqIIJRBhD6w?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="HarassAgro" class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Harass en prenant l'agro des creep</h3>
+      <div class="video-responsive">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/QBRVKoKVWX4?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="HarassNoAgro" class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Harass sans prendre l'agro des creeps</h3>
+      <div class="video-responsive">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-8-V7GhOVtE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="DiveAgro" class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Un dive en prenant l'agro de la tour</h3>
+      <div class="video-responsive">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/HslsqmPhR68?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div id="DiveNoAgro" class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Un dive sans prendre l'agro de la tour</h3>
+      <div class="video-responsive">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-3cbqWjP98A?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div id="Passive" class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal"><em>Stratégie passive</em></h3>
+      <div class="video-responsive">
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/-n8mnVmFtyc?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+    </div>
+  </div>
+
+
+  <div id="Agressive" class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal"><em>Stratégie agressive</em></h3>
+	  <div class="video-responsive">
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/QfkhzRQhfzc?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
